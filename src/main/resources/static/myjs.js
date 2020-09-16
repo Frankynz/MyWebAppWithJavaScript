@@ -146,7 +146,6 @@ function ajaxGetUserNowTable() {
         type: "GET",
         url: "/rest/getusernow",
         success : function(result) {
-            $('#user_now_page_table').empty();
             let userTable =
                 "<tr>" +
                 "<td>" + result.id                      +   "</td>" +
@@ -156,7 +155,7 @@ function ajaxGetUserNowTable() {
                 "<td>" + result.email                   +   "</td>" +
                 "<td>" + rolesToString(result.roles) +   "</td>" +
                 "</tr>";
-            $('#user_now_page_table').append(userTable);
+            $('#user_now_page_table').empty().append(userTable);
         }
     })
 }
