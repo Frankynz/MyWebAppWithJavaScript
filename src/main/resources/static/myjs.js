@@ -162,7 +162,7 @@ function ajaxGetUserNowTable() {
 }
 
 function stringToRoles(textRoles) {
-    let roles = new Array();
+    let roles = [];
     if (textRoles.includes('ADMIN')) {
         roles.push({'id' : 1, 'name' : 'ADMIN'});
     }
@@ -173,7 +173,7 @@ function stringToRoles(textRoles) {
 }
 
 function rolesToString(roles) {
-    let textRoles = new Array();
+    let textRoles = [];
     $.each(roles, function (i, role) {
         textRoles[i] = role.name;
     })
